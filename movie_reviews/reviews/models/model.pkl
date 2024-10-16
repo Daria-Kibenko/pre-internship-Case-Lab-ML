@@ -1,0 +1,9 @@
+from sklearn.naive_bayes import MultinomialNB
+import joblib
+
+# Обучаем модель
+model = MultinomialNB()
+model.fit(X_train, y_train)
+
+# Сохраняем модель
+joblib.dump(model, 'model.pkl')
